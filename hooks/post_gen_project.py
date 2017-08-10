@@ -19,6 +19,7 @@ import string
 
 # Get the root project directory
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+print(PROJECT_DIRECTORY)
 
 # Use the system PRNG if possible
 try:
