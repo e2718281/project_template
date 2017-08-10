@@ -82,7 +82,7 @@ def make_secret_key(project_directory):
         'env.example'
     )
 
-    # env.example file
+    # .env file
     set_secret_key(env_file)
 
 
