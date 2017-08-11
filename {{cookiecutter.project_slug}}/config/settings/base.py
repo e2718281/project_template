@@ -131,7 +131,13 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Chicago'
+# GENERAL CONFIGURATION
+# ------------------------------------------------------------------------------
+# Local time zone for this installation. Choices can be found here:
+# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
+# although not all choices may be available on all operating systems.
+# In a Windows environment this must be set to your system time zone.
+TIME_ZONE = '{{ cookiecutter.timezone }}'
 
 USE_I18N = True
 
@@ -146,7 +152,9 @@ USE_TZ = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            str(APPS_DIR.path('templates')),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
